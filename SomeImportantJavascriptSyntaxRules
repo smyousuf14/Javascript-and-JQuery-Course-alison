@@ -1,0 +1,26 @@
+->Javscript has for loops, while loops, and do-while loops similar to Java
+
+
+
+->JavaScript has a number of “reserved words,” or words that have special meaning in the language. You should avoid using these words in your code except when using them with their intended meaning.
+break, case, catch, continue, default, delete, do, else, finally, for, function, if, in, instanceof, new, return, switch, this, throw, try, typeof, var, void, while, with, abstract, boolean, byte, char, class, const, debugger, double, enum, export, extends, final, float, goto, implements, import, int, interface, long, native, package, private, protected, public, short, static, super, synchronized, throws, transient, volatile
+
+--------------------------
+
+Arrays in javascript:
+var myArray = [ 'hello', 'world' ];
+
+
+var myArray = [ 'hello', 'world', 'foo', 'bar' ];
+console.log(myArray[3]);   // logs 'bar'
+
+
+var myArray = [ 'hello', 'world' ];
+console.log(myArray.length);   // logs 2
+
+var myArray = [ 'hello', 'world' ];
+myArray[1] = 'changed';
+
+---------------------------------------
+Objects:
+
