@@ -1,2 +1,5 @@
 # Javascript-and-JQuery-Course-alison
-Javascript and JQuery course by Alison
+Javascript and JQuery course provided by Alison
+
+
+www.alison.com
