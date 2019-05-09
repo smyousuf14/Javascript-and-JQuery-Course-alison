@@ -129,8 +129,6 @@ var myOtherFn = function() {
 
 myFn(myOtherFn);   // logs 'hello world'
 
-
-
 ------------------------------------------------------------------
 Testing Type
 
