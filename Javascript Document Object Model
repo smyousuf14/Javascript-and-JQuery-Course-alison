@@ -1,2 +1,84 @@
 Document Object Model :
 
+The document object represents the whole html document.
+
+When html document is loaded in the browser, it becomes a document object. It is the root element that represents the html document. It has properties and methods. By the help of document object, we can add dynamic content to our web page.
+
+Methods of document object
+
+We can access and change the contents of document by its methods.
+
+The important methods of document object are as follows:
+Method	Description
+write("string")	writes the given string on the doucment.
+writeln("string")	writes the given string on the doucment with newline character at the end.
+getElementById()	returns the element having the given id value.
+getElementsByName()	returns all the elements having the given name value.
+getElementsByTagName()	returns all the elements having the given tag name.
+getElementsByClassName()	returns all the elements having the given class name.
+
+1)Accessing field value by document object
+    <script type="text/javascript">  
+    function printvalue(){  
+    var name=document.form1.name.value;  
+    alert("Welcome: "+name);  
+    }  
+    </script>  
+      
+    <form name="form1">  
+    Enter Name:<input type="text" name="name"/>  
+    <input type="button" onclick="printvalue()" value="print name"/>  
+    </form>  
+
+2)document.getElementById() method
+-returns the element of specified id.
+    <script type="text/javascript">  
+    function getcube(){  
+    var number=document.getElementById("number").value;  
+    alert(number*number*number);  
+    }  
+    </script>  
+    <form>  
+    Enter No:<input type="text" id="number" name="number"/><br/>  
+    <input type="button" value="cube" onclick="getcube()"/>  
+    </form>  
+
+3)document.getElementsByName() method
+-The document.getElementsByName() method returns all the element of specified name.
+The syntax of the getElementsByName() method is given below:
+
+    document.getElementsByName("name")  
+    
+Ex:
+    <script type="text/javascript">  
+    function totalelements()  
+    {  
+    var allgenders=document.getElementsByName("gender");  
+    alert("Total Genders:"+allgenders.length);  
+    }  
+    </script>  
+    <form>  
+    Male:<input type="radio" name="gender" value="male">  
+    Female:<input type="radio" name="gender" value="female">  
+      
+    <input type="button" onclick="totalelements()" value="Total Genders">  
+    </form>  
+    
+4) document.getElementsByTagName() method
+-The document.getElementsByTagName() method returns all the element of specified tag name.
+
+The syntax of the getElementsByTagName() method is given below:
+
+    document.getElementsByTagName("name")  
+Ex:
+    <script type="text/javascript">  
+    function countpara(){  
+    var totalpara=document.getElementsByTagName("p");  
+    alert("total p tags are: "+totalpara.length);  
+      
+    }  
+    </script>  
+    <p>This is a pragraph</p>  
+    <p>Here we are going to count total number of paragraphs by getElementByTagName() method.</p>  
+    <p>Let's see the simple example</p>  
+    <button onclick="countpara()">count paragraph</button>  
