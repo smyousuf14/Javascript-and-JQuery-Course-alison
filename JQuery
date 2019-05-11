@@ -1,3 +1,28 @@
+In this tutorial, you will get a lot of jQuery examples to understand the topic well. Let's see a simple jQuery example.
+File: firstjquery.html
+
+    <!DOCTYPE html>  
+    <html>  
+    <head>  
+     <title>First jQuery Example</title>  
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">  
+     </script>  
+     <script type="text/javascript" language="javascript">  
+     $(document).ready(function() {  
+     $("p").css("background-color", "pink");  
+     });  
+     </script>  
+     </head>  
+    <body>  
+    <p>This is first paragraph.</p>  
+    <p>This is second paragraph.</p>  
+    <p>This is third paragraph.</p>  
+    </body>  
+    </html>  
+
+
+
+----------------------------------------------------------------------------------------------------
 $(document).ready():
 
 
@@ -267,4 +292,63 @@ $('h1').html();
 
 
 Setters return a jQuery object, allowing you to continue to call jQuery methods on your selection; getters return whatever they were asked to get, meaning you cannot continue to call jQuery methods on the value returned by the getter.
+
+---------------------------------------------
+CSS, Styling, and Dimensions:
+
+
+jQuery includes a handy way to get and set CSS properties of elements.
+Note
+
+CSS properties that normally include a hyphen need to be camel cased in JavaScript. For example, the CSS property font-size is expressed as fontSize in JavaScript.
+
+Example 3.18. Getting CSS properties
+
+$('h1').css('fontSize'); // returns a string such as "19px"
+
+
+Example 3.19. Setting CSS properties
+
+$('h1').css('fontSize', '100px'); // setting an individual property
+$('h1').css({ 'fontSize' : '100px', 'color' : 'red' }); // setting multiple properties
+
+
+Note the style of the argument we use on the second line -- it is an object that contains multiple properties. This is a common way to pass multiple arguments to a function, and many jQuery setter methods accept objects to set mulitple values at once.
+Using CSS Classes for Styling
+
+As a getter, the $.fn.css method is valuable; however, it should generally be avoided as a setter in production-ready code, because you don't want presentational information in your JavaScript. Instead, write CSS rules for classes that describe the various visual states, and then simply change the class on the element you want to affect.
+
+Example 3.20. Working with classes
+
+var $h1 = $('h1');
+
+$h1.addClass('big');
+$h1.removeClass('big');
+$h1.toggleClass('big');
+
+if ($h1.hasClass('big')) { ... }
+
+
+Classes can also be useful for storing state information about an element, such as indicating that an element is selected.
+Dimensions
+
+jQuery offers a variety of methods for obtaining and modifying dimension and position information about an element.
+
+The code in Example 3.21, “Basic dimensions methods” is just a very brief overview of the dimensions functionality in jQuery; for complete details about jQuery dimension methods, visit http://api.jquery.com/category/dimensions/.
+
+Example 3.21. Basic dimensions methods
+
+$('h1').width('50px');   // sets the width of all H1 elements
+$('h1').width();         // gets the width of the first H1
+
+$('h1').height('50px');  // sets the height of all H1 elements
+$('h1').height();        // gets the height of the first H1
+
+$('h1').position();      // returns an object containing position
+                         // information for the first H1 relative to
+                         // its "offset (positioned) parent"
+
+----------------------------
+Attributes: 
+
 
