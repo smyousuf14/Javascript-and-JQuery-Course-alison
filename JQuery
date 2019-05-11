@@ -148,4 +148,69 @@ Note
 
 A selection only fetches the elements that are on the page when you make the selection. If you add elements to the page later, you'll have to repeat the selection or otherwise add them to the selection stored in the variable. Stored selections don't magically update when the DOM changes.
 
+Refining & Filtering Selections
+
+Sometimes you have a selection that contains more than what you're after; in this case, you may want to refine your selection. jQuery offers several methods for zeroing in on exactly what you're after.
+
+Example 3.11. Refining selections
+
+$('div.foo').has('p');          // div.foo elements that contain <p>'s
+$('h1').not('.bar');            // h1 elements that don't have a class of bar
+$('ul li').filter('.current');  // unordered list items with class of current
+$('ul li').first();             // just the first unordered list item
+$('ul li').eq(5);               // the sixth 
+
+
+Selecting Form Elements
+
+jQuery offers several pseudo-selectors that help you find elements in your forms; these are especially helpful because it can be difficult to distinguish between form elements based on their state or type using standard CSS selectors.
+
+:button
+
+    Selects <button> elements and elements with type="button"
+:checkbox
+
+    Selects inputs with type="checkbox"
+:checked
+
+    Selects checked inputs
+:disabled
+
+    Selects disabled form elements
+:enabled
+
+    Selects enabled form elements
+:file
+
+    Selects inputs with type="file"
+:image
+
+    Selects inputs with type="image"
+:input
+
+    Selects <input>, <textarea>, and <select> elements
+:password
+
+    Selects inputs with type="password"
+:radio
+
+    Selects inputs with type="radio"
+:reset
+
+    Selects inputs with type="reset"
+:selected
+
+    Selects options that are selected
+:submit
+
+    Selects inputs with type="submit"
+:text
+
+    Selects inputs with type="text"
+
+Example 3.12. Using form-related pseduo-selectors
+
+$("#myForm :input'); // get all elements that accept input
+
+---------------------------------------------------------------
 
